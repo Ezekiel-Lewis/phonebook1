@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block head %}<title>Update Contacts</title>{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1>Update Contacts</h1>
+        <br> 
+        <form action="/update/{{contact.id}}" METHOD="POST">
+            <input type="text" name="name" id = "name" value = "{{contact.title}}">
+            <input type="submit" value="Update Contact" class="btn btn-secondary">
+        </form>
+       
+
+    </div>
+    {% endblock %}
