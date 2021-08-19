@@ -42,11 +42,6 @@ def update(id):
         print("inside else")
         return render_template('update.html',contact=contact)
 
-    #updates new item
-    # contact_id = contact.query.filter_by(id=contact_id).first()
-    # contact_id.complete = not contact_id.complete
-    # db.session.commit()
-    # return redirect(url_for("index"))
 @app.route("/delete/<int:contact_id>")
 def delete(contact_id):
     contact_id = Contact.query.filter_by(id=contact_id).first()
